@@ -11,15 +11,20 @@ import OAuthSwift
 import AsyncTask
 import Argo
 
+/**
+ A convenience singleton class. Should call `setupWithConsumerKey` first.
+ */
 public class Yelp {
 
     private static var _client : YelpClient?
 
+    /// The shared YelpClient. Should call `Yelp.setupWithConsumerKey` before accessing it.
     public static var client : YelpClient! {
         precondition(Yelp._client != nil, "Should call `Yelp.setupWithConsumerKey` first")
         return _client!
     }
 
+    /// Authenticates the Yelp Client
     public static func setupWithConsumerKey(consumerKey: String, consumerSecret: String, accessToken: String, accessTokenSecret: String) {
         precondition(Yelp._client == nil, "Only call `Yelp.setupWithConsumerKey` once")
         Yelp._client = YelpClient(consumerKey: consumerKey, consumerSecret: consumerSecret, accessToken: accessToken, accessTokenSecret: accessTokenSecret)
@@ -30,10 +35,14 @@ public class Yelp {
 public typealias SearchResponseHandler = (SearchResponse?, ErrorType?) -> ()
 public typealias LookupResponseHandler = (Business?, ErrorType?) -> ()
 
+/**
+ OAuth and HTTP Client
+ */
 public class YelpClient : OAuthSwiftClient {
 
     let baseURLString = "https://api.yelp.com/v2/"
 
+    /// Search for business
     public func search(parameters: SearchParameters, completion: SearchResponseHandler) {
         Task {
             do {
@@ -55,6 +64,7 @@ public class YelpClient : OAuthSwiftClient {
         }.async()
     }
 
+    /// Lookup a business by id
     public func lookup(businessId: String, completion: LookupResponseHandler) {
         Task {
             do {

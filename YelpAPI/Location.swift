@@ -44,6 +44,7 @@ public struct Location {
 }
 
 extension Location: Decodable {
+    /// Decoce from JSON
     public static func decode(j: JSON) -> Decoded<Location> {
         let a = curry(Location.init)
             <^> j <|| "address"
@@ -60,6 +61,7 @@ extension Location: Decodable {
 }
 
 extension CLLocationCoordinate2D: Decodable {
+    /// Decoce from JSON
     public static func decode(j: JSON) -> Decoded<CLLocationCoordinate2D> {
         return curry(CLLocationCoordinate2D.init)
             <^> j <| "latitude"

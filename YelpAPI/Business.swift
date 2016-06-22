@@ -76,6 +76,7 @@ public struct Business {
 }
 
 extension Business: Decodable {
+    /// Decoce from JSON
     public static func decode(j: JSON) -> Decoded<Business> {
         let a = curry(Business.init)
             <^> j <| "id"

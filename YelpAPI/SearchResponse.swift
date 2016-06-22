@@ -22,6 +22,7 @@ public struct SearchResponse {
 }
 
 extension SearchResponse: Decodable {
+    /// Decoce from JSON
     public static func decode(j: JSON) -> Decoded<SearchResponse> {
         return curry(SearchResponse.init)
             <^> j <| "total"

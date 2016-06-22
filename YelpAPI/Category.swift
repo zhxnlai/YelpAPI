@@ -13,13 +13,16 @@ import Curry
 /// Business category. See [a list of all categories](https://www.yelp.com/developers/documentation/v2/all_category_list).
 public struct Category {
 
+    /// name
     public let name: String
 
+    /// alias
     public let alias: String
 
 }
 
 extension Category: Decodable {
+    /// Decoce from JSON
     public static func decode(j: JSON) -> Decoded<Category> {
         switch j {
         case .Array(let val):

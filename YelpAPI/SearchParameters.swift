@@ -9,20 +9,26 @@
 import Foundation
 import CoreLocation
 
+/// Yelp Search Sort Mode
 public enum SortMode: Int {
     case BestMatched = 0, Distance, HighestRated
 }
 
+/// Yelp Search Location Parameter
 public enum LocationParameter {
 
+    /// Specify Location by Neighborhood, Address, or City
     case Text(LocationText)
 
+    /// Specify Location by Geographical Bounding Box
     case Bounds(GeographicalBoundingBox)
 
+    /// Specify Location by Geographic Coordinate
     case Coordinate(GeographicCoordinate)
 
 }
 
+/// The LocationText struct
 public struct LocationText {
 
     /// Specifies the combination of "address, neighborhood, city, state or zip, optional country" to be used when searching for businesses.
@@ -38,6 +44,7 @@ public struct LocationText {
 
 }
 
+/// The GeographicalBoundingBox struct
 public struct GeographicalBoundingBox {
 
     /// Southwest latitude of bounding box
@@ -60,6 +67,7 @@ public struct GeographicalBoundingBox {
     }
 }
 
+/// The GeographicCoordinate struct
 public struct GeographicCoordinate {
 
     /// Latitude of geo-point to search near
