@@ -1,0 +1,9 @@
+github "zhxnlai/AsyncTask" ~> 0.1
+
+github "OAuthSwift/OAuthSwift" ~> 0.5.0
+
+github "Alamofire/Alamofire" ~> 3.4.1
+
+github "thoughtbot/Argo" ~> 3.0
+
+github "thoughtbot/Curry"
