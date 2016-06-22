@@ -9,5 +9,5 @@ env:
 before_script:
 - carthage bootstrap --platform osx, ios
 script:
-- xctool -project YelpAPI.xcodeproj -scheme YelpAPITests build test
+- xctool -project YelpAPI.xcodeproj -scheme YelpAPITests -sdk iphonesimulator9.3 build test
 # - pod lib lint =YelpAPI.podspec

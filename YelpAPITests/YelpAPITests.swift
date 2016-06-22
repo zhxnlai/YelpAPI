@@ -15,14 +15,14 @@ class YelpAPITests: XCTestCase {
     static var onceToken: dispatch_once_t = 0
 
     override func setUp() {
+        super.setUp()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+
         dispatch_once(&YelpAPITests.onceToken) {
             Yelp.setupWithConsumerKey("Zt5KH9QFVfTSG6F23htZ1g", consumerSecret: "H5MZtL9n4csO7RD7PEc7_6GBQxc", accessToken: "7ZFnGjWX1Qz5osa56K-aZZRJieTxDmrx", accessTokenSecret: "1dATChTFG92fCQeaTfyvE5trqzU")
         }
-
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
