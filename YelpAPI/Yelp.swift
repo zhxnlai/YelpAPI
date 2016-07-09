@@ -57,7 +57,6 @@ public class YelpClient : OAuthSwiftClient {
                     debugPrint(json)
                     throw error
                 }
-
             } catch {
                 completion(nil, error)
             }
