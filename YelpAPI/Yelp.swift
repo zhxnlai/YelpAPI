@@ -83,7 +83,6 @@ public class YelpClient : OAuthSwiftClient {
                 completion(nil, error)
             }
         }.async()
-
     }
 
     func get(urlString: String, parameters: [String : AnyObject], headers: [String : String]?) -> ThrowableTask<(NSData, NSHTTPURLResponse)> {
