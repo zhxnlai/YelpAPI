@@ -177,7 +177,7 @@
 				094250CF1D1929E800A8EC2C /* Info.plist */,
 			);
 			name = MacOS;
-			path = YelpAPIMacOS;
+			path = Source/MacOS;
 			sourceTree = SOURCE_ROOT;
 		};
 		09AB87FC1D19312900B416C5 /* Tests */ = {
@@ -186,8 +186,7 @@
 				09AB87FD1D19312900B416C5 /* YelpAPITests.swift */,
 				09AB87FF1D19312900B416C5 /* Info.plist */,
 			);
-			name = Tests;
-			path = YelpAPITests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		09AB88131D1935AA00B416C5 /* Base */ = {
@@ -197,6 +196,7 @@
 				09AB881F1D1949FF00B416C5 /* Models */,
 			);
 			name = Base;
+			path = ../Source/Base;
 			sourceTree = "<group>";
 		};
 		09AB88141D1935C400B416C5 /* Source */ = {
@@ -249,6 +249,7 @@
 				09FD33B11D18958500E9DD34 /* Info.plist */,
 			);
 			name = iOS;
+			path = ../Source/iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,7 +452,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = YelpAPIMacOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/MacOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.axcel.YelpAPIMacOS;
@@ -471,7 +472,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = YelpAPIMacOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/MacOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.axcel.YelpAPIMacOS;
@@ -488,7 +489,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = YelpAPITests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.axcel.YelpAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,7 +504,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = YelpAPITests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.axcel.YelpAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -613,7 +614,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = YelpAPI/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.axcel.YelpAPI;
@@ -635,7 +636,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = YelpAPI/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.axcel.YelpAPI;
@@ -663,6 +664,7 @@
 				09AB88051D19312900B416C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09FD33A61D18958500E9DD34 /* Build configuration list for PBXProject "YelpAPI" */ = {
 			isa = XCConfigurationList;
