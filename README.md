@@ -8,6 +8,30 @@ Yelp API in Swift
 [![Platform](https://img.shields.io/cocoapods/p/AsyncTask.svg?style=flat)](http://cocoapods.org/pods/AsyncTask)
 -->
 
+## Installation
+
+### [CocoaPods](http://cocoapods.org)
+YelpAPI is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "YelpAPISwift"
+```
+
+### [Carthage](https://github.com/Carthage/Carthage)
+
+**Xcode 7.1 required**
+
+Add this to `Cartfile`
+
+```
+github "zhxnlai/YelpAPI" ~> 0.1
+```
+
+```
+$ carthage update
+```
+
 ## Usage
 
 Resgister as a [Yelp developer](https://www.yelp.com/developers/manage_api_keys).
@@ -22,7 +46,7 @@ Make use of [Search API](https://www.yelp.com/developers/documentation/v2/search
 let params = SearchParameters(term: "Restaurants")
 Business.search(params) {response, error in
     guard error == nil else { print(error) }
-    print(response.business)
+    print(response.businesses)
     print(response.total)
 }
 
