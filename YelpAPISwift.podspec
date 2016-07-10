@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'YelpAPI'
+  s.name             = 'YelpAPISwift'
   s.version          = '0.1.0'
   s.summary          = 'Yelp API in Swift.'
 
@@ -15,4 +15,10 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Source/Base/*.swift'
   s.requires_arc = true
+
+  s.dependency 'Argo', '~> 3.0.1'
+  s.dependency 'AsyncTask', '~> 0.1.3'
+  s.dependency 'Curry', '~> 2.3.1'
+  s.dependency 'OAuthSwift', '~> 0.5.2'
+
 end
